@@ -293,6 +293,7 @@ text = "PoB DPS multipliers"
 
 [node name="Statistics" type="Panel" parent="."]
 process_mode = 3
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ngu7l")
@@ -663,7 +664,7 @@ offset_left = 119.0
 offset_top = 215.0
 offset_right = 1013.0
 offset_bottom = 464.0
-text = "* these values represent the average amount of hits that can be expected when throwing 1/2/3 traps per throw on top of a size 3 enemy (most bosses such as Maven, Shaper etc.) for each combination of gem levels and quality."
+text = "* these values represent the average amount of hits that can be expected when throwing 1/2/3 traps per throw on top of a size 3 enemy (most bosses such as Maven, Shaper etc.) for each combination of gem levels and quality"
 autowrap_mode = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
