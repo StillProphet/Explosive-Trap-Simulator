@@ -98,6 +98,7 @@ offset_left = 10.0
 offset_top = 130.0
 offset_right = 290.0
 offset_bottom = 150.0
+step = 10.0
 value = 20.0
 tick_count = 6
 
@@ -271,7 +272,7 @@ offset_left = 10.0
 offset_top = 592.0
 offset_right = 290.0
 offset_bottom = 617.0
-text = "Autothrows per second: 5"
+text = "Autothrows per second: 10"
 horizontal_alignment = 1
 
 [node name="Autothrow2" type="HSlider" parent="Stats"]
@@ -280,7 +281,7 @@ offset_left = 10.0
 offset_top = 617.0
 offset_right = 290.0
 offset_bottom = 637.0
-value = 5.0
+value = 10.0
 tick_count = 11
 
 [node name="Statistics" type="Button" parent="Stats"]
@@ -297,6 +298,18 @@ visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ngu7l")
+
+[node name="Header" type="Label" parent="Statistics"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 5.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Explosive Trap"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CloseStatistics" type="Button" parent="Statistics"]
 layout_mode = 1
@@ -316,8 +329,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 10.0
-offset_bottom = -40.0
+offset_top = 64.0
+offset_bottom = -391.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 8
@@ -658,12 +671,371 @@ size_flags_horizontal = 3
 text = "14.1 / 22.5 / 33.2"
 horizontal_alignment = 1
 
+[node name="Header2" type="Label" parent="Statistics"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 282.0
+offset_bottom = 330.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Explosive Trap of Shrapnel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="Statistics"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 341.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 8
+
+[node name="Label" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level \\ Quality"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20%"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "30%"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "40%"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "50%"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "60%"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "70%"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "80%"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.1 / 7.2 / 10.3"
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.4 / 7.8 / 11.3"
+horizontal_alignment = 1
+
+[node name="Label14" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.8 / 8.4 / 12.3"
+horizontal_alignment = 1
+
+[node name="Label15" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.1 / 9.1 / 13.3"
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.4 / 9.8 / 14.3"
+horizontal_alignment = 1
+
+[node name="Label17" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.8 / 10.5 / 15.3"
+horizontal_alignment = 1
+
+[node name="Label19" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.1 / 11.2 / 16.3"
+horizontal_alignment = 1
+
+[node name="Label18" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "21 - 23"
+horizontal_alignment = 1
+
+[node name="Label21" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.6 / 8.2 / 11.7"
+horizontal_alignment = 1
+
+[node name="Label22" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.9 / 8.9 / 12.7"
+horizontal_alignment = 1
+
+[node name="Label23" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.3 / 9.6 / 13.7"
+horizontal_alignment = 1
+
+[node name="Label24" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.7 / 10.3 / 14.7"
+horizontal_alignment = 1
+
+[node name="Label25" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.1 / 11.0 / 15.7"
+horizontal_alignment = 1
+
+[node name="Label26" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.4 / 11.7 / 16.7"
+horizontal_alignment = 1
+
+[node name="Label28" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.7 / 12.4 / 17.7"
+horizontal_alignment = 1
+
+[node name="Label27" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "24 - 26"
+horizontal_alignment = 1
+
+[node name="Label30" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4.7 / 8.4 / 12.1"
+horizontal_alignment = 1
+
+[node name="Label31" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.0 / 9.1 / 13.2"
+horizontal_alignment = 1
+
+[node name="Label32" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.4 / 9.8 / 14.3"
+horizontal_alignment = 1
+
+[node name="Label33" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.8 / 10.5 / 15.4"
+horizontal_alignment = 1
+
+[node name="Label34" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.2 / 11.2 / 16.5"
+horizontal_alignment = 1
+
+[node name="Label35" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.5 / 11.9 / 17.6"
+horizontal_alignment = 1
+
+[node name="Label37" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.8 / 12.6 / 18.7"
+horizontal_alignment = 1
+
+[node name="Label36" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "27 - 29"
+horizontal_alignment = 1
+
+[node name="Label39" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.2 / 9.3 / 13.8"
+horizontal_alignment = 1
+
+[node name="Label40" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.5 / 10.1 / 14.9"
+horizontal_alignment = 1
+
+[node name="Label41" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.9 / 10.9 / 16.0"
+horizontal_alignment = 1
+
+[node name="Label42" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.3 / 11.7 / 17.1"
+horizontal_alignment = 1
+
+[node name="Label43" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.7 / 12.4 / 18.2"
+horizontal_alignment = 1
+
+[node name="Label44" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.1 / 13.2 / 19.3"
+horizontal_alignment = 1
+
+[node name="Label46" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.4 / 14.0 / 20.4"
+horizontal_alignment = 1
+
+[node name="Label45" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "30 - 34"
+horizontal_alignment = 1
+
+[node name="Label48" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.7 / 10.4 / 15.0"
+horizontal_alignment = 1
+
+[node name="Label49" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.1 / 11.2 / 16.2"
+horizontal_alignment = 1
+
+[node name="Label50" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.5 / 12.0 / 17.4"
+horizontal_alignment = 1
+
+[node name="Label51" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.9 / 12.8 / 18.6"
+horizontal_alignment = 1
+
+[node name="Label52" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.3 / 13.6 / 19.8"
+horizontal_alignment = 1
+
+[node name="Label53" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.7 / 14.4 / 21.0"
+horizontal_alignment = 1
+
+[node name="Label55" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8.1 / 15.2 / 22.2"
+horizontal_alignment = 1
+
+[node name="Label54" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "35 - 40"
+horizontal_alignment = 1
+
+[node name="Label57" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5.9 / 10.7 / 15.4"
+horizontal_alignment = 1
+
+[node name="Label58" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.3 / 11.5 / 16.6"
+horizontal_alignment = 1
+
+[node name="Label59" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "6.7 / 12.3 / 17.8"
+horizontal_alignment = 1
+
+[node name="Label60" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.1 / 13.1 / 19.0"
+horizontal_alignment = 1
+
+[node name="Label61" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.5 / 13.9 / 20.2"
+horizontal_alignment = 1
+
+[node name="Label62" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "7.9 / 14.7 / 21.4"
+horizontal_alignment = 1
+
+[node name="Label63" type="Label" parent="Statistics/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "8.3 / 15.5 / 22.6"
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="Statistics"]
 layout_mode = 0
-offset_left = 119.0
-offset_top = 215.0
-offset_right = 1013.0
-offset_bottom = 464.0
+offset_left = 12.0
+offset_top = 587.0
+offset_right = 906.0
+offset_bottom = 645.0
 text = "* these values represent the average amount of hits that can be expected when throwing 1/2/3 traps per throw on top of a size 3 enemy (most bosses such as Maven, Shaper etc.) for each combination of gem levels and quality"
 autowrap_mode = 2
 
