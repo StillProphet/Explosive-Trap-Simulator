@@ -46,6 +46,7 @@ var text = ""
 var dps = 0
 
 
+
 func _ready():
 	regex.compile("^[0-9]*$")
 	$Stats/AverageHit2.set_text("1")
