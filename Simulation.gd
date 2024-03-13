@@ -39,11 +39,13 @@ var averageHitPercent = 100
 var autothrowSpeed = 0
 var enemyPos = Vector2(screenWidth/2-150,screenHeight/2)
 var origin : Vector2
-var trapSpread = 150
+var trapSpread = 190
 var regex = RegEx.new()
 var oldtext = ""
 var text = ""
 var dps = 0
+
+var content = ""
 
 
 
@@ -138,6 +140,8 @@ func _on_button_button_up():
 
 
 func _on_timer_timeout():
+	#if totalIterations >= 5000:
+		#populate_table()
 	queue_redraw()
 	$Timer.start(1/autothrowSpeed)
 
@@ -149,7 +153,37 @@ func _on_button_2_toggled(toggled_on):
 		$Timer.stop()
 
 
+func populate_table():
+	var terminated = false
+	var table = FileAccess.open("res://shrapnel5000iterations.txt", FileAccess.WRITE)
+	if $Stats/TrapsThrown2.value == 3:
+		content += str(str("%.1f" % snapped(dps, 0.1)) + "\n")
+	else:
+		content += str(str("%.1f" % snapped(dps, 0.1)) + " / ")
+	table.store_string(content)
+	if $Stats/TrapsThrown2.value < 3:
+		$Stats/TrapsThrown2.value += 1
+	else:
+		$Stats/TrapsThrown2.value = 1
+		if $Stats/GemQuality2.value < 80:
+			$Stats/GemQuality2.value += 10
+		else:
+			$Stats/GemQuality2.value = 20
+			if $Stats/GemLevel2.value < 35:
+				$Stats/GemLevel2.value += 3
+			else:
+				terminated = true
+	if !terminated:
+		reset()
+	else:
+		get_tree().quit()
+
+
 func _on_reset_button_up():
+	reset()
+
+
+func reset():
 	totalHits = 0
 	totalExplosions = 0
 	averageHitPercent = 0
