@@ -9,32 +9,42 @@ var color
 
 var gemStats = []
 
-var gemStats0 = [[1.2,0.7,3.0],
+var normal = [[1.2,0.7,3.0],
 	[1.2,0.7,3.0], [1.2,0.7,3.0], [1.3,0.8,3.0], [1.3,0.8,3.0], [1.3,0.8,4.0], [1.4,0.9,4.0], [1.4,0.9,4.0], [1.4,0.9,4.0], [1.5,1.0,5.0], [1.5,1.0,5.0],
  	[1.5,1.0,5.0], [1.6,1.1,5.0], [1.6,1.1,6.0], [1.6,1.1,6.0], [1.7,1.2,6.0], [1.7,1.2,6.0], [1.7,1.2,7.0], [1.8,1.3,7.0], [1.8,1.3,7.0], [1.8,1.3,7.0],
  	[1.9,1.4,8.0], [1.9,1.4,8.0], [1.9,1.4,8.0], [2.0,1.5,8.0], [2.0,1.5,8.0], [2.0,1.5,9.0], [2.1,1.6,9.0], [2.1,1.6,9.0], [2.1,1.6,9.0], [2.2,1.7,9.0],
  	[2.2,1.7,9.0], [2.2,1.7,10.0], [2.2,1.7,10.0], [2.2,1.7,10.0], [2.3,1.8,10.0], [2.3,1.8,10.0], [2.3,1.8,10.0], [2.3,1.8,10.0], [2.3,1.8,10.0], [2.3,1.8,10.0]
 	]
 
-var gemStats1 = [[3.0,1.3,3.0],
+var shrapnel_old = [[3.0,1.3,3.0],
 	[3.0,1.3,3.0], [3.0,1.3,3.0], [3.1,1.4,3.0], [3.1,1.4,3.0], [3.1,1.4,4.0], [3.2,1.5,4.0], [3.2,1.5,4.0], [3.2,1.5,4.0], [3.3,1.6,5.0], [3.3,1.6,5.0],
  	[3.3,1.6,5.0], [3.4,1.7,5.0], [3.4,1.7,6.0], [3.4,1.7,6.0], [3.5,1.8,6.0], [3.5,1.8,6.0], [3.5,1.8,7.0], [3.6,1.9,7.0], [3.6,1.9,7.0], [3.6,1.9,7.0],
  	[3.7,2.0,8.0], [3.7,2.0,8.0], [3.7,2.0,8.0], [3.8,2.1,8.0], [3.8,2.1,8.0], [3.8,2.1,9.0], [3.9,2.2,9.0], [3.9,2.2,9.0], [3.9,2.2,9.0], [4.0,2.3,9.0],
  	[4.0,2.3,9.0], [4.0,2.3,10.0], [4.0,2.3,10.0], [4.0,2.3,10.0], [4.1,2.4,10.0], [4.1,2.4,10.0], [4.1,2.4,10.0], [4.1,2.4,10.0], [4.1,2.4,10.0], [4.1,2.4,10.0]
 	]
 
-var enemyRadius
-var secondaryRadius
-var tertiaryRadius
+
+var shrapnel_new = [[2.4,0.7,3.0], 
+	[2.4,0.7,3.0], [2.4,0.7,3.0], [2.5,0.8,3.0], [2.5,0.8,3.0], [2.5,0.8,4.0], [2.6,0.9,4.0], [2.6,0.9,4.0], [2.6,0.9,4.0], [2.7,1.0,5.0], [2.7,1.0,5.0], 
+	[2.7,1.0,5.0], [2.8,1.1,5.0], [2.8,1.1,6.0], [2.8,1.1,6.0], [2.9,1.2,6.0], [2.9,1.2,6.0], [2.9,1.2,7.0], [3.0,1.3,7.0], [3.0,1.3,7.0], [3.0,1.3,7.0], 
+	[3.1,1.4,8.0], [3.1,1.4,8.0], [3.1,1.4,8.0], [3.2,1.5,8.0], [3.2,1.5,8.0], [3.2,1.5,9.0], [3.3,1.6,9.0], [3.3,1.6,9.0], [3.3,1.6,9.0], [3.4,1.7,9.0], 
+	[3.4,1.7,9.0], [3.4,1.7,10.0], [3.4,1.7,10.0], [3.4,1.7,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0]]
+
+
+
+
+var enemyRadius = 0
+var secondaryRadius = 0
+var tertiaryRadius = 0
 # variation in small explosion radius variance
 var radiusVariance = 0.3 
-var smallExplosionNumber
+var smallExplosionNumber = 0
 var hitsPercent = 0
 var hits = 0
 var totalHits = 0
 var totalExplosions = 0
 var totalIterations = 0
-var averageHits
+var averageHits = 0
 var averageHitPercent = 100
 var autothrowSpeed = 0
 var enemyPos = Vector2(screenWidth/2-150,screenHeight/2)
@@ -55,11 +65,13 @@ func _ready():
 	$Stats/Throwspeed2.set_text("1")
 
 
-func _physics_process(delta):
+func _process(delta):
 	if $Stats/GemType2.selected == 0:
-		gemStats = gemStats0
+		gemStats = normal
+	elif $Stats/GemType2.selected == 1:
+		gemStats = shrapnel_old
 	else:
-		gemStats = gemStats1
+		gemStats = shrapnel_new
 	
 	enemyRadius = ($Stats/EnemySize2.value-1) * 10
 	secondaryRadius = gemStats[$Stats/GemLevel2.value][0] * 100
@@ -79,6 +91,52 @@ func _physics_process(delta):
 	$Stats/TotalHitPercentage2.set_text(str(averageHitPercent) + "%")
 	$Stats/Autothrow.set_text("Autothrows per second: " + str($Stats/Autothrow2.value))
 	$Stats/DPS2.set_text(str(dps))
+
+
+func test():
+	var trapPositions = []
+	var i = 0
+	hits = 0
+	while i < $Stats/TrapsThrown2.value:
+		var validPos = false
+		if $Stats/TrapsThrown2.value == 1:
+			origin = enemyPos
+		else:
+			while !validPos:
+				origin = enemyPos + Vector2(randf_range(-trapSpread,trapSpread),randf_range(-trapSpread,trapSpread))
+				if origin.distance_to(enemyPos) <= trapSpread:
+					if trapPositions.size() > 0:
+						var temp = 0
+						for item in trapPositions:
+							if origin.distance_to(item) > 20:
+								temp += 1
+						if temp == trapPositions.size():
+							trapPositions.append(origin)
+							validPos = true
+					else:
+						trapPositions.append(origin)
+						validPos = true
+		var j = 0
+		while j < smallExplosionNumber:
+			var origin2 = Vector2(origin.x + randf_range(-secondaryRadius,secondaryRadius),origin.y + randf_range(-secondaryRadius,secondaryRadius))
+			var radius = floor((tertiaryRadius * randf_range(1-radiusVariance,1+radiusVariance))*10) / 10
+			if origin2.distance_to(origin) <= secondaryRadius:
+				if origin2.distance_to(enemyPos) - enemyRadius + 1 <= radius:
+					color = green
+					hits += 1
+				else:
+					color = red
+				j += 1
+		if hits == smallExplosionNumber * $Stats/TrapsThrown2.value:
+			hitsPercent = "100.0"
+		else:
+			hitsPercent = str("%.2f" % snapped(hits/(smallExplosionNumber*$Stats/TrapsThrown2.value) * 100, 0.01))
+		i += 1
+	totalHits += hits
+	totalExplosions += smallExplosionNumber * $Stats/TrapsThrown2.value
+	totalIterations += 1
+	averageHitPercent = str("%.2f" % snapped(totalHits / totalExplosions * 100, 0.01))
+
 
 
 func _draw():
@@ -140,8 +198,6 @@ func _on_button_button_up():
 
 
 func _on_timer_timeout():
-	#if totalIterations >= 5000:
-		#populate_table()
 	queue_redraw()
 	$Timer.start(1/autothrowSpeed)
 
@@ -153,13 +209,21 @@ func _on_button_2_toggled(toggled_on):
 		$Timer.stop()
 
 
+func testAccuracy():
+	var terminated = false
+	var table = FileAccess.open("res://testingaccuracy1.txt", FileAccess.WRITE)
+	content += str(str("%.2f" % snapped(dps, 0.01)) + "\n")
+	table.store_string(content)
+	reset()
+
+
 func populate_table():
 	var terminated = false
-	var table = FileAccess.open("res://shrapnel5000iterations.txt", FileAccess.WRITE)
+	var table = FileAccess.open("res://newshrapnel50000iterations.txt", FileAccess.WRITE)
 	if $Stats/TrapsThrown2.value == 3:
-		content += str(str("%.1f" % snapped(dps, 0.1)) + "\n")
+		content += str(str("%.2f" % snapped(dps, 0.01)) + "\n")
 	else:
-		content += str(str("%.1f" % snapped(dps, 0.1)) + " / ")
+		content += str(str("%.2f" % snapped(dps, 0.01)) + " / ")
 	table.store_string(content)
 	if $Stats/TrapsThrown2.value < 3:
 		$Stats/TrapsThrown2.value += 1

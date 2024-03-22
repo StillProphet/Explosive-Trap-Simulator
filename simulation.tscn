@@ -57,12 +57,14 @@ offset_right = 290.0
 offset_bottom = 41.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
-item_count = 2
+item_count = 3
 selected = 0
 popup/item_0/text = "normal"
 popup/item_0/id = 0
-popup/item_1/text = "of Shrapnel"
+popup/item_1/text = "of Shrapnel (3.23)"
 popup/item_1/id = 1
+popup/item_2/text = "of Shrapnel (3.24)"
+popup/item_2/id = 2
 
 [node name="GemLevel" type="Label" parent="Stats"]
 layout_mode = 0
@@ -294,6 +296,7 @@ text = "PoB DPS multipliers"
 
 [node name="Statistics" type="Panel" parent="."]
 process_mode = 3
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ngu7l")
@@ -391,25 +394,25 @@ horizontal_alignment = 1
 [node name="Label12" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.2 / 8.8 / 12.7"
+text = "7.3 / 8.7 / 12.6"
 horizontal_alignment = 1
 
 [node name="Label13" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.9 / 9.7 / 13.9"
+text = "8.0 / 9.6 / 13.9"
 horizontal_alignment = 1
 
 [node name="Label14" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.7 / 10.4 / 15.1"
+text = "8.7 / 10.5 / 15.2"
 horizontal_alignment = 1
 
 [node name="Label15" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.3 / 11.2 / 16.6"
+text = "9.3 / 11.3 / 16.5"
 horizontal_alignment = 1
 
 [node name="Label16" type="Label" parent="Statistics/GridContainer"]
@@ -421,13 +424,13 @@ horizontal_alignment = 1
 [node name="Label17" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.8 / 13.1 / 19.2"
+text = "10.8 / 13.1 / 19.0"
 horizontal_alignment = 1
 
 [node name="Label19" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.4 / 13.9 / 20.3"
+text = "11.4 / 13.9 / 20.4"
 horizontal_alignment = 1
 
 [node name="Label18" type="Label" parent="Statistics/GridContainer"]
@@ -439,43 +442,43 @@ horizontal_alignment = 1
 [node name="Label21" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.1 / 10.1 / 14.6"
+text = "8.1 / 10.1 / 14.7"
 horizontal_alignment = 1
 
 [node name="Label22" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.8 / 11.1 / 16.0"
+text = "8.8 / 11.0 / 16.0"
 horizontal_alignment = 1
 
 [node name="Label23" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.5 / 12.0 / 17.4"
+text = "9.5 / 11.9 / 17.4"
 horizontal_alignment = 1
 
 [node name="Label24" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.2 / 12.9 / 18.8"
+text = "10.2 / 12.8 / 18.8"
 horizontal_alignment = 1
 
 [node name="Label25" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.9 / 13.7 / 20.1"
+text = "10.9 / 13.8 / 20.2"
 horizontal_alignment = 1
 
 [node name="Label26" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.6 / 14.7 / 21.4"
+text = "11.6 / 14.7 / 21.5"
 horizontal_alignment = 1
 
 [node name="Label28" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "12.4 / 15.6 / 22.8"
+text = "12.4 / 15.6 / 22.9"
 horizontal_alignment = 1
 
 [node name="Label27" type="Label" parent="Statistics/GridContainer"]
@@ -487,19 +490,19 @@ horizontal_alignment = 1
 [node name="Label30" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.9 / 11.5 / 16.8"
+text = "8.9 / 11.6 / 16.8"
 horizontal_alignment = 1
 
 [node name="Label31" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.6 / 12.6 / 18.2"
+text = "9.6 / 12.5 / 18.3"
 horizontal_alignment = 1
 
 [node name="Label32" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.3 / 13.4 / 19.7"
+text = "10.4 / 13.5 / 19.7"
 horizontal_alignment = 1
 
 [node name="Label33" type="Label" parent="Statistics/GridContainer"]
@@ -511,13 +514,13 @@ horizontal_alignment = 1
 [node name="Label34" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.8 / 15.3 / 22.6"
+text = "11.8 / 15.4 / 22.5"
 horizontal_alignment = 1
 
 [node name="Label35" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "12.5 / 16.2 / 24.1"
+text = "12.5 / 16.3 / 24.0"
 horizontal_alignment = 1
 
 [node name="Label37" type="Label" parent="Statistics/GridContainer"]
@@ -535,13 +538,13 @@ horizontal_alignment = 1
 [node name="Label39" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.0 / 12.0 / 17.6"
+text = "9.0 / 12.0 / 17.5"
 horizontal_alignment = 1
 
 [node name="Label40" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.7 / 13.1 / 19.0"
+text = "9.8 / 13.0 / 19.0"
 horizontal_alignment = 1
 
 [node name="Label41" type="Label" parent="Statistics/GridContainer"]
@@ -553,13 +556,13 @@ horizontal_alignment = 1
 [node name="Label42" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.2 / 14.9 / 22.0"
+text = "11.2 / 15.0 / 22.0"
 horizontal_alignment = 1
 
 [node name="Label43" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.9 / 16.0 / 23.4"
+text = "11.9 / 16.0 / 23.5"
 horizontal_alignment = 1
 
 [node name="Label44" type="Label" parent="Statistics/GridContainer"]
@@ -571,7 +574,7 @@ horizontal_alignment = 1
 [node name="Label46" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "13.4 / 18.1 / 26.6"
+text = "13.4 / 18.0 / 26.5"
 horizontal_alignment = 1
 
 [node name="Label45" type="Label" parent="Statistics/GridContainer"]
@@ -583,31 +586,31 @@ horizontal_alignment = 1
 [node name="Label48" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "9.8 / 13.5 / 19.6"
+text = "9.9 / 13.5 / 19.7"
 horizontal_alignment = 1
 
 [node name="Label49" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.5 / 14.5 / 21.3"
+text = "10.6 / 14.5 / 21.3"
 horizontal_alignment = 1
 
 [node name="Label50" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.3 / 15.5 / 22.8"
+text = "11.3 / 15.6 / 22.8"
 horizontal_alignment = 1
 
 [node name="Label51" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "12.1 / 16.5 / 24.3"
+text = "12.1 / 16.6 / 24.4"
 horizontal_alignment = 1
 
 [node name="Label52" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "12.8 / 17.6 / 26.0"
+text = "12.8 / 17.7 / 26.0"
 horizontal_alignment = 1
 
 [node name="Label53" type="Label" parent="Statistics/GridContainer"]
@@ -619,7 +622,7 @@ horizontal_alignment = 1
 [node name="Label55" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "14.3 / 19.7 / 29.3"
+text = "14.3 / 19.7 / 29.1"
 horizontal_alignment = 1
 
 [node name="Label54" type="Label" parent="Statistics/GridContainer"]
@@ -637,19 +640,19 @@ horizontal_alignment = 1
 [node name="Label58" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "10.7 / 15.0 / 21.9"
+text = "10.7 / 15.0 / 22.0"
 horizontal_alignment = 1
 
 [node name="Label59" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "11.4 / 16.0 / 23.6"
+text = "11.4 / 16.1 / 23.6"
 horizontal_alignment = 1
 
 [node name="Label60" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "12.2 / 17.2 / 25.3"
+text = "12.2 / 17.1 / 25.2"
 horizontal_alignment = 1
 
 [node name="Label61" type="Label" parent="Statistics/GridContainer"]
@@ -661,7 +664,7 @@ horizontal_alignment = 1
 [node name="Label62" type="Label" parent="Statistics/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "13.7 / 19.3 / 28.5"
+text = "13.7 / 19.3 / 28.4"
 horizontal_alignment = 1
 
 [node name="Label63" type="Label" parent="Statistics/GridContainer"]
@@ -678,7 +681,7 @@ offset_top = 282.0
 offset_bottom = 330.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
-text = "Explosive Trap of Shrapnel"
+text = "Explosive Trap of Shrapnel (3.24)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -750,43 +753,43 @@ horizontal_alignment = 1
 [node name="Label12" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "4.1 / 7.0 / 10.2"
+text = "3.3 / 5.4 / 7.7"
 horizontal_alignment = 1
 
 [node name="Label13" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "4.4 / 7.7 / 11.1"
+text = "3.5 / 5.9 / 8.4"
 horizontal_alignment = 1
 
 [node name="Label14" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "4.8 / 8.2 / 12.0"
+text = "3.8 / 6.4 / 9.1"
 horizontal_alignment = 1
 
 [node name="Label15" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.1 / 9.1 / 13.2"
+text = "4.0 / 6.9 / 9.9"
 horizontal_alignment = 1
 
 [node name="Label16" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.6 / 9.8 / 14.3"
+text = "4.3 / 7.4 / 10.6"
 horizontal_alignment = 1
 
 [node name="Label17" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.9 / 10.3 / 15.1"
+text = "4.5 / 7.9 / 11.3"
 horizontal_alignment = 1
 
 [node name="Label19" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.2 / 11.2 / 16.3"
+text = "4.8 / 8.4 / 12.0"
 horizontal_alignment = 1
 
 [node name="Label18" type="Label" parent="Statistics/GridContainer2"]
@@ -798,43 +801,43 @@ horizontal_alignment = 1
 [node name="Label21" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "4.7 / 7.9 / 11.6"
+text = "3.7 / 6.3 / 8.9"
 horizontal_alignment = 1
 
 [node name="Label22" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.1 / 8.6 / 12.5"
+text = "4.0 / 6.8 / 9.6"
 horizontal_alignment = 1
 
 [node name="Label23" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.3 / 9.5 / 13.6"
+text = "4.2 / 7.3 / 10.4"
 horizontal_alignment = 1
 
 [node name="Label24" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.7 / 10.0 / 14.7"
+text = "4.5 / 7.8 / 11.2"
 horizontal_alignment = 1
 
 [node name="Label25" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.9 / 10.8 / 15.8"
+text = "4.8 / 8.4 / 12.0"
 horizontal_alignment = 1
 
 [node name="Label26" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.5 / 11.6 / 16.6"
+text = "5.0 / 8.9 / 12.8"
 horizontal_alignment = 1
 
 [node name="Label28" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.7 / 12.1 / 17.7"
+text = "5.3 / 9.4 / 13.6"
 horizontal_alignment = 1
 
 [node name="Label27" type="Label" parent="Statistics/GridContainer2"]
@@ -846,43 +849,43 @@ horizontal_alignment = 1
 [node name="Label30" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.1 / 8.9 / 13.0"
+text = "4.2 / 7.1 / 10.2"
 horizontal_alignment = 1
 
 [node name="Label31" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.4 / 9.7 / 14.0"
+text = "4.4 / 7.7 / 11.0"
 horizontal_alignment = 1
 
 [node name="Label32" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.9 / 10.6 / 15.2"
+text = "4.7 / 8.2 / 11.9"
 horizontal_alignment = 1
 
 [node name="Label33" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.2 / 11.2 / 16.2"
+text = "5.0 / 8.8 / 12.7"
 horizontal_alignment = 1
 
 [node name="Label34" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.6 / 11.8 / 17.4"
+text = "5.3 / 9.3 / 13.5"
 horizontal_alignment = 1
 
 [node name="Label35" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.4 / 13.3 / 19.5"
+text = "5.6 / 9.9 / 14.3"
 horizontal_alignment = 1
 
 [node name="Label37" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.8 / 12.6 / 18.7"
+text = "5.9 / 10.5 / 15.2"
 horizontal_alignment = 1
 
 [node name="Label36" type="Label" parent="Statistics/GridContainer2"]
@@ -894,43 +897,43 @@ horizontal_alignment = 1
 [node name="Label39" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.2 / 9.4 / 13.3"
+text = "4.3 / 7.5 / 10.7"
 horizontal_alignment = 1
 
 [node name="Label40" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.6 / 10.0 / 14.7"
+text = "4.6 / 8.0 / 11.6"
 horizontal_alignment = 1
 
 [node name="Label41" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.1 / 10.7 / 15.6"
+text = "4.9 / 8.6 / 12.5"
 horizontal_alignment = 1
 
 [node name="Label42" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.4 / 11.4 / 16.9"
+text = "5.2 / 9.2 / 13.3"
 horizontal_alignment = 1
 
 [node name="Label43" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.7 / 12.1 / 17.8"
+text = "5.5 / 9.8 / 14.2"
 horizontal_alignment = 1
 
 [node name="Label44" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.1 / 13.0 / 19.0"
+text = "5.8 / 10.4 / 15.1"
 horizontal_alignment = 1
 
 [node name="Label46" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.7 / 13.8 / 20.0"
+text = "6.1 / 11.0 / 16.0"
 horizontal_alignment = 1
 
 [node name="Label45" type="Label" parent="Statistics/GridContainer2"]
@@ -942,43 +945,43 @@ horizontal_alignment = 1
 [node name="Label48" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.8 / 10.4 / 15.0"
+text = "4.8 / 8.4 / 12.1"
 horizontal_alignment = 1
 
 [node name="Label49" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.2 / 11.1 / 16.0"
+text = "5.1 / 9.0 / 13.0"
 horizontal_alignment = 1
 
 [node name="Label50" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.6 / 12.0 / 17.4"
+text = "5.4 / 9.6 / 14.0"
 horizontal_alignment = 1
 
 [node name="Label51" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.0 / 12.6 / 18.3"
+text = "5.8 / 10.3 / 14.9"
 horizontal_alignment = 1
 
 [node name="Label52" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.4 / 13.3 / 19.6"
+text = "6.0 / 10.9 / 15.8"
 horizontal_alignment = 1
 
 [node name="Label53" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.7 / 14.1 / 20.9"
+text = "6.4 / 11.5 / 16.8"
 horizontal_alignment = 1
 
 [node name="Label55" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.1 / 15.1 / 21.8"
+text = "6.7 / 12.1 / 17.6"
 horizontal_alignment = 1
 
 [node name="Label54" type="Label" parent="Statistics/GridContainer2"]
@@ -990,43 +993,43 @@ horizontal_alignment = 1
 [node name="Label57" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "5.9 / 10.6 / 15.3"
+text = "5.0 / 8.7 / 12.6"
 horizontal_alignment = 1
 
 [node name="Label58" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.3 / 11.3 / 16.4"
+text = "5.3 / 9.4 / 13.6"
 horizontal_alignment = 1
 
 [node name="Label59" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "6.8 / 12.2 / 17.8"
+text = "5.6 / 10.0 / 14.6"
 horizontal_alignment = 1
 
 [node name="Label60" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.1 / 13.0 / 18.9"
+text = "6.0 / 10.7 / 15.5"
 horizontal_alignment = 1
 
 [node name="Label61" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.6 / 13.8 / 20.1"
+text = "6.3 / 11.4 / 16.5"
 horizontal_alignment = 1
 
 [node name="Label62" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "7.9 / 14.5 / 21.2"
+text = "6.6 / 12.0 / 17.4"
 horizontal_alignment = 1
 
 [node name="Label63" type="Label" parent="Statistics/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "8.3 / 15.3 / 22.7"
+text = "7.0 / 12.6 / 18.4"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="Statistics"]
