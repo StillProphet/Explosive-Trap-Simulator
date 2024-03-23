@@ -33,6 +33,14 @@ offset_right = 105.0
 offset_bottom = 140.0
 text = "Reset"
 
+[node name="Testmode" type="CheckBox" parent="."]
+offset_left = 106.0
+offset_top = 14.0
+offset_right = 222.0
+offset_bottom = 45.0
+text = "(test mode)
+"
+
 [node name="Stats" type="Panel" parent="."]
 offset_left = 852.0
 offset_right = 1152.0
@@ -51,9 +59,9 @@ vertical_alignment = 1
 
 [node name="GemType2" type="OptionButton" parent="Stats"]
 layout_mode = 2
-offset_left = 156.0
+offset_left = 111.0
 offset_top = 10.0
-offset_right = 290.0
+offset_right = 291.0
 offset_bottom = 41.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -69,18 +77,18 @@ popup/item_2/id = 2
 [node name="GemLevel" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 50.0
+offset_top = 45.0
 offset_right = 290.0
-offset_bottom = 75.0
+offset_bottom = 70.0
 text = "Gem Level: 20"
 horizontal_alignment = 1
 
 [node name="GemLevel2" type="HSlider" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 75.0
+offset_top = 70.0
 offset_right = 290.0
-offset_bottom = 95.0
+offset_bottom = 90.0
 max_value = 40.0
 value = 20.0
 tick_count = 5
@@ -88,144 +96,185 @@ tick_count = 5
 [node name="GemQuality" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 105.0
+offset_top = 95.0
 offset_right = 290.0
-offset_bottom = 130.0
+offset_bottom = 120.0
 text = "Gem Level: 20"
 horizontal_alignment = 1
 
 [node name="GemQuality2" type="HSlider" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 130.0
+offset_top = 120.0
 offset_right = 290.0
-offset_bottom = 150.0
+offset_bottom = 140.0
 step = 10.0
 value = 20.0
 tick_count = 6
 
-[node name="EnemySize" type="Label" parent="Stats"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 160.0
-offset_right = 290.0
-offset_bottom = 185.0
-text = "Enemy Size: 3"
-horizontal_alignment = 1
-
-[node name="EnemySize2" type="HSlider" parent="Stats"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 185.0
-offset_right = 290.0
-offset_bottom = 205.0
-min_value = 2.0
-max_value = 5.0
-value = 3.0
-tick_count = 4
-
 [node name="TrapsThrown" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 215.0
+offset_top = 145.0
 offset_right = 290.0
-offset_bottom = 240.0
+offset_bottom = 170.0
 text = "Traps thrown: 1"
 horizontal_alignment = 1
 
 [node name="TrapsThrown2" type="HSlider" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 244.0
+offset_top = 170.0
 offset_right = 290.0
-offset_bottom = 264.0
+offset_bottom = 190.0
 min_value = 1.0
 max_value = 3.0
 value = 1.0
 tick_count = 3
 
-[node name="Hits" type="Label" parent="Stats"]
+[node name="EnemySize" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 205.0
+offset_right = 152.0
+offset_bottom = 230.0
+text = "Enemy Size:"
+
+[node name="EnemySize2" type="OptionButton" parent="Stats"]
+layout_mode = 2
+offset_left = 150.0
+offset_top = 203.0
+offset_right = 290.0
+offset_bottom = 234.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+item_count = 4
+selected = 0
+popup/item_0/text = "Small (2)"
+popup/item_0/id = 0
+popup/item_1/text = "Medium (3)"
+popup/item_1/id = 1
+popup/item_2/text = "Large (5)"
+popup/item_2/id = 2
+popup/item_3/text = "Massive (11)"
+popup/item_3/id = 3
+
+[node name="Area" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 240.0
+offset_right = 150.0
+offset_bottom = 265.0
+text = "PoB Area Multi:"
+
+[node name="Area2" type="LineEdit" parent="Stats"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 238.0
+offset_right = 290.0
+offset_bottom = 269.0
+alignment = 2
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+caret_blink = true
+
+[node name="Wall" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 275.0
-offset_right = 150.0
+offset_right = 250.0
 offset_bottom = 300.0
+text = "Is the enemy up against a wall?"
+
+[node name="Wall2" type="CheckBox" parent="Stats"]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 274.0
+offset_right = 286.0
+offset_bottom = 303.0
+
+[node name="Hits" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 310.0
+offset_right = 150.0
+offset_bottom = 335.0
 text = "Explosions Hit:"
 
 [node name="Hits2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 275.0
+offset_top = 310.0
 offset_right = 290.0
-offset_bottom = 300.0
+offset_bottom = 335.0
 text = "6/9 (66.66%)"
 horizontal_alignment = 2
 
 [node name="TotalIterations" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 305.0
+offset_top = 340.0
 offset_right = 150.0
-offset_bottom = 330.0
+offset_bottom = 365.0
 text = "Total Iterations: "
 
 [node name="TotalIterations2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 305.0
+offset_top = 340.0
 offset_right = 290.0
-offset_bottom = 330.0
+offset_bottom = 365.0
 text = "42"
 horizontal_alignment = 2
 
 [node name="TotalHits" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 335.0
+offset_top = 370.0
 offset_right = 150.0
-offset_bottom = 360.0
+offset_bottom = 395.0
 text = "Total Hits:"
 
 [node name="TotalHits2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 335.0
+offset_top = 370.0
 offset_right = 290.0
-offset_bottom = 360.0
+offset_bottom = 395.0
 text = "234/312"
 horizontal_alignment = 2
 
 [node name="TotalHitPercentage" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 365.0
+offset_top = 400.0
 offset_right = 150.0
-offset_bottom = 390.0
+offset_bottom = 425.0
 text = "Overlap:"
 
 [node name="TotalHitPercentage2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 365.0
+offset_top = 400.0
 offset_right = 290.0
-offset_bottom = 390.0
+offset_bottom = 425.0
 text = "67.26%"
 horizontal_alignment = 2
 
 [node name="AverageHit" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 400.0
+offset_top = 430.0
 offset_right = 150.0
-offset_bottom = 425.0
+offset_bottom = 455.0
 text = "Average Hit:"
 
 [node name="AverageHit2" type="LineEdit" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 397.0
+offset_top = 428.0
 offset_right = 290.0
-offset_bottom = 428.0
+offset_bottom = 459.0
 alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
@@ -234,17 +283,17 @@ caret_blink = true
 [node name="Throwspeed" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 440.0
+offset_top = 465.0
 offset_right = 150.0
-offset_bottom = 465.0
+offset_bottom = 490.0
 text = "Throwing speed:"
 
 [node name="Throwspeed2" type="LineEdit" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 437.0
+offset_top = 463.0
 offset_right = 290.0
-offset_bottom = 468.0
+offset_bottom = 494.0
 alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
@@ -252,18 +301,18 @@ virtual_keyboard_enabled = false
 [node name="DPS" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 480.0
+offset_top = 500.0
 offset_right = 150.0
-offset_bottom = 505.0
+offset_bottom = 525.0
 text = "DPS:
 "
 
 [node name="DPS2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 477.0
+offset_top = 500.0
 offset_right = 290.0
-offset_bottom = 508.0
+offset_bottom = 531.0
 text = "10000000"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -289,9 +338,9 @@ tick_count = 11
 [node name="Statistics" type="Button" parent="Stats"]
 layout_mode = 0
 offset_left = 50.0
-offset_top = 525.0
+offset_top = 536.0
 offset_right = 250.0
-offset_bottom = 575.0
+offset_bottom = 586.0
 text = "PoB DPS multipliers"
 
 [node name="Statistics" type="Panel" parent="."]
@@ -1045,6 +1094,7 @@ autowrap_mode = 2
 [connection signal="toggled" from="Autodraw" to="." method="_on_button_2_toggled"]
 [connection signal="button_up" from="Draw" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Reset" to="." method="_on_reset_button_up"]
+[connection signal="text_changed" from="Stats/Area2" to="." method="_on_area_2_text_changed"]
 [connection signal="text_changed" from="Stats/AverageHit2" to="." method="_on_average_hit_2_text_changed"]
 [connection signal="text_changed" from="Stats/Throwspeed2" to="." method="_on_throwspeed_2_text_changed"]
 [connection signal="button_up" from="Stats/Statistics" to="." method="_on_statistics_button_up"]
