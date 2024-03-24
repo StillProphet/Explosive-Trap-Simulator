@@ -29,6 +29,7 @@ var shrapnel_new = [[2.4,0.7,3.0],
 	[3.1,1.4,8.0], [3.1,1.4,8.0], [3.1,1.4,8.0], [3.2,1.5,8.0], [3.2,1.5,8.0], [3.2,1.5,9.0], [3.3,1.6,9.0], [3.3,1.6,9.0], [3.3,1.6,9.0], [3.4,1.7,9.0], 
 	[3.4,1.7,9.0], [3.4,1.7,10.0], [3.4,1.7,10.0], [3.4,1.7,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0], [3.5,1.8,10.0]]
 
+
 var enemyRadius = 0
 var secondaryRadius = 0
 var tertiaryRadius = 0
@@ -57,12 +58,14 @@ var wallPos = 100
 var aimPos = Vector2(0,0)
 
 
+
 func _ready():
 	regex.compile("^\\d*\\.?\\d*$")
 	$Stats/AverageHit2.set_text("1")
 	$Stats/Throwspeed2.set_text("1")
 	$Stats/Area2.set_text("1")
 	$Stats/EnemySize2.selected = 1
+
 
 
 func _process(delta):
@@ -82,7 +85,7 @@ func _process(delta):
 	dps = snapped(float($Stats/Throwspeed2.get_text()) * float($Stats/AverageHit2.get_text()) * (smallExplosionNumber * $Stats/TrapsThrown2.value * (float(averageHitPercent)/100)+1),0.1)
 	
 	if $Stats/Wall2.button_pressed:
-		wallPos = enemyPos.x + (secondaryRadius + tertiaryRadius) / 2
+		wallPos = max(enemyPos.x + enemySize*10 ,enemyPos.x + secondaryRadius/2 - enemySize * 6)
 	else:
 		wallPos = 1000
 	
@@ -98,13 +101,16 @@ func _process(delta):
 	$Stats/Autothrow.set_text("Autothrows per second: " + str($Stats/Autothrow2.value))
 	$Stats/DPS2.set_text(str(dps))
 	
+	
 	if $Testmode.button_pressed and $Autodraw.button_pressed:
 		quick_test()
 
 	if $Stats/Wall2.button_pressed:
 		aimPos = Vector2(wallPos - 10, enemyPos.y)
+		$Stats/Wall4.set_text(str((wallPos-enemyPos.x)/10) + "m")
 	else:
 		aimPos = enemyPos
+		$Stats/Wall4.set_text("-")
 
 
 
@@ -152,8 +158,8 @@ func test():
 
 
 func quick_test():
-	if totalIterations >= 50000:
-		populate_table()
+	#if totalIterations >= 10000:
+		#populate_table()
 	test()
 	test()
 	test()
@@ -245,12 +251,28 @@ func quick_test():
 	test()
 	test()
 	test()
+
+
+
+func populate_table2():
+	var terminated = false
+	var table = FileAccess.open("distanceCalcs.txt", FileAccess.WRITE)
+	if wallPos > enemyPos.x + enemySize*10:
+		wallPos -= 1
+		content += str(str("%.2f" % snapped(totalHits / totalExplosions * 100.0, 0.01)) + " at a distance of " + str(wallPos-enemyPos.x) + "\n")
+		table.store_string(content)
+	else:
+		terminated = true
+	if !terminated:
+		reset()
+	else:
+		get_tree().quit()
 
 
 
 func _draw():
 	if $Stats/Wall2.button_pressed:
-		draw_line(Vector2(wallPos, enemyPos.y - 350),Vector2(wallPos, enemyPos.y + 350),black,10,false)
+		draw_line(Vector2(wallPos, enemyPos.y - 350),Vector2(wallPos, enemyPos.y + 350),black,10,true)
 	# draw enemy
 	draw_circle(enemyPos, enemyRadius, black)
 	# draw traps
@@ -276,7 +298,7 @@ func _draw():
 					else:
 						trapPositions.append(origin)
 						validPos = true
-		draw_arc(origin,secondaryRadius,0,360,100,black,3)
+		draw_arc(origin,secondaryRadius,0,360,100,black,3,true)
 		draw_circle(origin,5,black)
 		# draw small explosions
 		var j = 0
@@ -290,7 +312,7 @@ func _draw():
 				else:
 					color = red
 				draw_circle(origin2,2,color)
-				draw_arc(origin2,radius,0,360,100,color,1)
+				draw_arc(origin2,radius,0,360,100,color,1,true)
 				j += 1
 		if hits == smallExplosionNumber * $Stats/TrapsThrown2.value:
 			hitsPercent = "100.0"
@@ -306,6 +328,7 @@ func _draw():
 
 func _on_button_button_up():
 	queue_redraw()
+	
 
 
 func _on_timer_timeout():
@@ -329,7 +352,7 @@ func testAccuracy():
 
 func populate_table():
 	var terminated = false
-	var table = FileAccess.open("newshrapnelWallDPS.txt", FileAccess.WRITE)
+	var table = FileAccess.open("normalWallDPS.txt", FileAccess.WRITE)
 	if $Stats/TrapsThrown2.value == 3:
 		content += str(str("%.2f" % snapped(dps, 0.01)) + "\n")
 	else:

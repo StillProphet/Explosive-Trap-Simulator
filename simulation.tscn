@@ -33,6 +33,20 @@ offset_right = 105.0
 offset_bottom = 140.0
 text = "Reset"
 
+[node name="Statistics2" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 593.0
+offset_right = 205.0
+offset_bottom = 643.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "PoB DPS multipliers"
+
 [node name="Testmode" type="CheckBox" parent="."]
 offset_left = 106.0
 offset_top = 14.0
@@ -186,95 +200,112 @@ offset_right = 250.0
 offset_bottom = 300.0
 text = "Is the enemy up against a wall?"
 
+[node name="Wall3" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 305.0
+offset_right = 250.0
+offset_bottom = 330.0
+text = "Ideal enemy dist. to wall:"
+
+[node name="Wall4" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 305.0
+offset_right = 289.0
+offset_bottom = 330.0
+text = "12 units"
+horizontal_alignment = 2
+
 [node name="Wall2" type="CheckBox" parent="Stats"]
 layout_mode = 0
-offset_left = 257.0
+offset_left = 267.0
 offset_top = 274.0
-offset_right = 286.0
+offset_right = 296.0
 offset_bottom = 303.0
 
 [node name="Hits" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 310.0
+offset_top = 335.0
 offset_right = 150.0
-offset_bottom = 335.0
+offset_bottom = 360.0
 text = "Explosions Hit:"
 
 [node name="Hits2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 310.0
+offset_top = 335.0
 offset_right = 290.0
-offset_bottom = 335.0
+offset_bottom = 360.0
 text = "6/9 (66.66%)"
 horizontal_alignment = 2
 
 [node name="TotalIterations" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 340.0
+offset_top = 365.0
 offset_right = 150.0
-offset_bottom = 365.0
+offset_bottom = 390.0
 text = "Total Iterations: "
 
 [node name="TotalIterations2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 340.0
+offset_top = 365.0
 offset_right = 290.0
-offset_bottom = 365.0
+offset_bottom = 390.0
 text = "42"
 horizontal_alignment = 2
 
 [node name="TotalHits" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 370.0
+offset_top = 395.0
 offset_right = 150.0
-offset_bottom = 395.0
+offset_bottom = 420.0
 text = "Total Hits:"
 
 [node name="TotalHits2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 370.0
+offset_top = 395.0
 offset_right = 290.0
-offset_bottom = 395.0
+offset_bottom = 420.0
 text = "234/312"
 horizontal_alignment = 2
 
 [node name="TotalHitPercentage" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 400.0
+offset_top = 425.0
 offset_right = 150.0
-offset_bottom = 425.0
+offset_bottom = 450.0
 text = "Overlap:"
 
 [node name="TotalHitPercentage2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 400.0
+offset_top = 425.0
 offset_right = 290.0
-offset_bottom = 425.0
+offset_bottom = 450.0
 text = "67.26%"
 horizontal_alignment = 2
 
 [node name="AverageHit" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 430.0
+offset_top = 455.0
 offset_right = 150.0
-offset_bottom = 455.0
+offset_bottom = 480.0
 text = "Average Hit:"
 
 [node name="AverageHit2" type="LineEdit" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 428.0
+offset_top = 453.0
 offset_right = 290.0
-offset_bottom = 459.0
+offset_bottom = 484.0
 alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
@@ -283,17 +314,17 @@ caret_blink = true
 [node name="Throwspeed" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 465.0
+offset_top = 490.0
 offset_right = 150.0
-offset_bottom = 490.0
+offset_bottom = 515.0
 text = "Throwing speed:"
 
 [node name="Throwspeed2" type="LineEdit" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 463.0
+offset_top = 488.0
 offset_right = 290.0
-offset_bottom = 494.0
+offset_bottom = 519.0
 alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
@@ -301,18 +332,18 @@ virtual_keyboard_enabled = false
 [node name="DPS" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 500.0
+offset_top = 525.0
 offset_right = 150.0
-offset_bottom = 525.0
+offset_bottom = 550.0
 text = "DPS:
 "
 
 [node name="DPS2" type="Label" parent="Stats"]
 layout_mode = 0
 offset_left = 150.0
-offset_top = 500.0
+offset_top = 525.0
 offset_right = 290.0
-offset_bottom = 531.0
+offset_bottom = 556.0
 text = "10000000"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -334,14 +365,6 @@ offset_right = 290.0
 offset_bottom = 637.0
 value = 100.0
 tick_count = 11
-
-[node name="Statistics" type="Button" parent="Stats"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 536.0
-offset_right = 250.0
-offset_bottom = 586.0
-text = "PoB DPS multipliers"
 
 [node name="Statistics" type="Panel" parent="."]
 process_mode = 3
@@ -1094,8 +1117,8 @@ autowrap_mode = 2
 [connection signal="toggled" from="Autodraw" to="." method="_on_button_2_toggled"]
 [connection signal="button_up" from="Draw" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="Reset" to="." method="_on_reset_button_up"]
+[connection signal="button_up" from="Statistics2" to="." method="_on_statistics_button_up"]
 [connection signal="text_changed" from="Stats/Area2" to="." method="_on_area_2_text_changed"]
 [connection signal="text_changed" from="Stats/AverageHit2" to="." method="_on_average_hit_2_text_changed"]
 [connection signal="text_changed" from="Stats/Throwspeed2" to="." method="_on_throwspeed_2_text_changed"]
-[connection signal="button_up" from="Stats/Statistics" to="." method="_on_statistics_button_up"]
 [connection signal="button_up" from="Statistics/CloseStatistics" to="." method="_on_close_statistics_button_up"]
